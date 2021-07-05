@@ -10,7 +10,7 @@ import java.util.Arrays;
  * 那么记录这个较小元素的索引和值，继续和后面的元素比较，直至最后，交换两个元素的位置。
  * 下一次循环，最小元素即为记录的值和索引，第一个元素不用再次比较。
  */
-public class selectSort {
+public class SelectSort {
     public static void main(String[] args) {
         int[] arr = {10, 20, 1, 3, 5, 21, 8};
         System.out.println("排序前元素顺序：" + Arrays.toString(arr));
