@@ -13,7 +13,13 @@ import java.util.Arrays;
 public class selectSort {
     public static void main(String[] args) {
         int[] arr = {10, 20, 1, 3, 5, 21, 8};
-        System.out.println("交换前元素顺序：" + Arrays.toString(arr));
+        System.out.println("排序前元素顺序：" + Arrays.toString(arr));
+        selectMethod(arr);
+        System.out.println("排序后元素顺序：" + Arrays.toString(arr));
+
+    }
+
+    public static void selectMethod(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             int minIndex = i;
             int min = arr[i];
@@ -31,7 +37,5 @@ public class selectSort {
                 arr[i] = min;
             }
         }
-        System.out.println("交换后元素顺序：" + Arrays.toString(arr));
-
     }
 }
