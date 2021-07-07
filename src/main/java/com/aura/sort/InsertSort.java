@@ -12,25 +12,24 @@ import java.util.Arrays;
  */
 public class InsertSort {
     public static void main(String[] args) {
-        int[] arr = {10, 2, 3, 5, 1};
+        int[] arr = {10, 2, 3, 5, 1,20};
         insertMethod(arr);
-        System.out.println("排序后："+ Arrays.toString(arr));
+        System.out.println("排序后：" + Arrays.toString(arr));
     }
 
     public static void insertMethod(int[] arr) {
         //利用循环，找到待插入的位置
         for (int i = 1; i < arr.length; i++) {
+            //待插入的值
             int insertVal = arr[i];
+            //和前面的元素依次进行比较
             int insertIndex = i - 1;
-            //条件1：索引不能越界
-            //条件2：当前元素小于前一个元素
-            while (insertIndex >= 0 && insertVal < arr[insertIndex]) {
-                //大的值后移
+            while (insertIndex >=0 && insertVal < arr[insertIndex]) {
+                //大的元素后移
                 arr[insertIndex + 1] = arr[insertIndex];
-                //索引前移
                 insertIndex--;
             }
-            //出了循环，代表找到了插入位置
+            //出了循环代表找到了插入的位置
             arr[insertIndex + 1] = insertVal;
         }
 
